@@ -6,7 +6,7 @@ export default class Inventario{
         this._precio = 0;
         this._primerArticulo = null;
         this._ultimoArticulo = null;
-        this._articulos = 0;        
+        this._articulos = 1;        
         console.log(this._articulos);
     }
 
@@ -94,11 +94,6 @@ export default class Inventario{
       if(pos == this._primerArticulo){
         this._primerArticulo = pos.siguiente;
       }
-      else{
-        let posA = this._buscarAnterior(articulo.codigo);
-        pos.siguiente.anterior = posA; 
-        posA.siguiente = pos.siguiente;       
-      }
       console.log(this._primerArticulo);
       row.remove();
     }
@@ -106,7 +101,7 @@ export default class Inventario{
     Inverción(){
       let ultimo = this._ultimoArticulo;
       while(ultimo !== null){
-        console.log('invertido por código: ' + ultimo.codigo);
+        console.log('Se invirtio por el código: ' + ultimo.codigo);
         ultimo = ultimo.anterior;
       }
     } 

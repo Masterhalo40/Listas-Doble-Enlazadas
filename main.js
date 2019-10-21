@@ -35,5 +35,4 @@ class Main{
     
     }
 }
-
 let m = new Main()

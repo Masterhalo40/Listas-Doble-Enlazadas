@@ -21,24 +21,25 @@ export default class Articulo{
     get cantidad(){
         return this._cantidad;
     }
-    get descripcion(){
+    get descripcion() {
         return this._descripcion;
     }
-    get siguiente(){
+    get siguiente() {
         return this._siguiente;
     }
-    get anterior(){
+    get anterior() {
         return this._anterior;
     }
 
-    set siguiente(siguiente){
+    set siguiente(siguiente) {
         this._siguiente = siguiente;
     }
-    set anterior(anterior){
+    
+    set anterior(anterior) {
         this._anterior = anterior;
     }
-
+    
     toString(){
-        let a = `El artículo ${this._nombre} contiene el código ${this._codigo} y tiene un precio de $${this._precio}`; return a
+        let a = `El artículo ${this._nombre} tiene el código ${this._codigo} con un precio de $${this._precio}`; return a
     }
 }
